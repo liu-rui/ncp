@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(name='ncp',
-      version='1.8',
+      version='1.9',
       packages=find_packages(),
       include_package_data=True,  # 启用清单文件MANIFEST.in
       exclude_package_data={'': ['.gitignore']},
