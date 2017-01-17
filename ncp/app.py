@@ -10,8 +10,8 @@ import os
 from jinja2 import Environment, FileSystemLoader
 
 
-__author__ = 'liu rui'
-__version__ = '1.11'
+from .release import __author__, __version__
+
 
 _PRODUCT_DATA = OrderedDict([
     # 基础

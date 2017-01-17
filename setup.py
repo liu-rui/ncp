@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_packages
 
-from ncp.app import __author__, __version__, __doc__
+from ncp.release import __author__, __version__, __doc__
 
 setup(name='ncp',
       version=__version__,
