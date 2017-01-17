@@ -11,7 +11,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 __author__ = 'liu rui'
-__version__ = '1.0'
+__version__ = '1.11'
 
 _PRODUCT_DATA = OrderedDict([
     # 基础
@@ -161,6 +161,8 @@ def main():
                         default='nginx.conf', help='保存为指定的文件')
     parser.add_argument(
         '-t', '--type', choices=['prod', 'xingang'], default='prod', help='类型；prod：托管环境；xingang：新港')
+    parser.add_argument('-v', '--version', action='version',
+                        version='%(prog)s {0}' .format(__version__))
     args = parser.parse_args()
     env = Environment(loader=FileSystemLoader(
         os.path.join(os.path.split(__file__)[0], 'templates')))
