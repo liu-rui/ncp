@@ -3,4 +3,4 @@
 'nginx 配置文件生成工具'
 
 __author__ = 'liu rui'
-__version__ = '1.12'
+__version__ = '1.14'

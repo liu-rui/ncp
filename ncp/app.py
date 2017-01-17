@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-'nginx 配置文件生成工具'
-
 
 import argparse
 from collections import OrderedDict
@@ -10,7 +8,7 @@ import os
 from jinja2 import Environment, FileSystemLoader
 
 
-from .release import __author__, __version__
+from .release import __version__
 
 
 _PRODUCT_DATA = OrderedDict([
