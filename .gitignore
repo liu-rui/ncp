@@ -89,3 +89,4 @@ ENV/
 .ropeproject
 /.vscode/launch.json
 /nginx.conf
+.vscode
