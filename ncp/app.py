@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+'nginx 配置文件生成工具'
 
 import argparse
 from collections import OrderedDict
@@ -8,7 +9,8 @@ import os
 from jinja2 import Environment, FileSystemLoader
 
 
-from .release import __version__
+__author__ = 'liu rui'
+__version__ = '1.15'
 
 
 _PRODUCT_DATA = OrderedDict([
@@ -163,7 +165,7 @@ def main():
                         version='%(prog)s {0}' .format(__version__))
     args = parser.parse_args()
     env = Environment(loader=FileSystemLoader(
-        os.path.join(os.path.split(__file__)[0], 'templates')))
+        os.path.join(os.path.dirname(__file__), 'templates')))
     env.filters['format_sub_dir'] = format_sub_dir
     tmp = env.get_template('template.j2')
     txt = tmp.render(data=_PRODUCT_DATA if args.type ==
