@@ -38,7 +38,7 @@
     {% for k in data %} 
     upstream {{ k }} {
         {%- for address in data[k] %}
-            server {{ address }};
+            {% if loop.index == 1 %}#{% endif %}server {{ address }};
         {%- endfor %}
     }  
     {%- endfor %}
